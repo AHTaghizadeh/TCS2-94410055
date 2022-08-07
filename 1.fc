@@ -10,4 +10,16 @@
 
 ;; testable
 (int) gcd(int a, int b) method_id {
+  int t = a;
+  int rem;
+  if(a<b){
+    a = b;
+    b = t;
+  }
+  while(b>0) {
+    rem = a-b;
+    a = b;
+    b = rem;
+  }
+  return a;
 }
